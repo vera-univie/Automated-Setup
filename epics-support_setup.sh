@@ -1,4 +1,21 @@
 #!/bin/bash
+#
+# Created by: Daniel Finley
+# For: VERA (Uni Wien)
+# Date: 12.07.2024
+#
+# This bash excutable installs and sets up EPICS support in the folder where
+# this file is located. It also installs all necessary libraries and git repos.
+#
+# To set up EPICS support, run:
+# sudo chmod u+x epics-support_setup.sh
+# sudo ./epics-support_setup.sh
+# in the folder that you wish EPICS support to be set up (this must be your EPICS folder)
+#
+# The executable requires two pieces of input from the user. First, the username for which EPICS support
+# should be installed, and second, confirmation if the script should download the newest versions of
+# the different support modules, or if it should download a stable version from our github.
+#
 
 
 echo -e "\n-----------------------------------------------------------------------\n"
@@ -7,7 +24,7 @@ read username
 
 echo -e "\n-----------------------------------------------------------------------\n"
 echo -e "\nWould you like to install the newest versions of the support modules? (y/n)\n"
-echo -e "If not, a stable, not updated, version of the modules will be installed"
+echo -e "If not, a stable, not updated, version of the modules will be installed (RECOMMENDED)"
 read download_type
 
 epics_dir=$(pwd)
