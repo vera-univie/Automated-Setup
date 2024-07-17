@@ -39,7 +39,7 @@ To install EtherCAT for EPICS, execute the epics-ethercat_setup.sh file, which m
 
 The executable requires no additional input from the user once it has been started.
 
-# Using an IOC to control control EtherCAT modules
+# Using an IOC to control EtherCAT modules
 In our case, we are using typical Beckhoff modules. You can use the scanTest IOC as an example. There are already modules entered there, so replace them with the ones you want. Follow these steps to do so:
 
 Navigate to the /etc folder of your IOC (e.g. ~/EPICS/ethercat/iocs/scanTest/etc)
