@@ -23,7 +23,7 @@ To install EPICS Base, execute the epics-base_setup.sh file the same way as befo
 
 ## EPICS support
 To install EPICS support, execute the epics-support_setup.sh file while it is in your EPICS folder.
-> sudo chmod u+x epics-base_setup.sh
+> sudo chmod u+x epics-support_setup.sh
 >
 > sudo ./epics-base_setup.sh
 
