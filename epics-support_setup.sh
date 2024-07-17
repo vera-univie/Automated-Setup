@@ -139,15 +139,19 @@ else
 	git clone https://github.com/vera-univie/EPICS-support.git ./
 	sed -i "/ISIS/c\# unnecessary line was deleted by VERA" seq/configure/RELEASE
 	sed -i "/TIRPC=YES/c\TIRPC=YES" asyn/configure/CONFIG_SITE
-	for d in ./*/ ; do 
-		cd $d
-		edit_paths configure/RELEASE
-		chown $username ./
-		make clean; make
-		cd ../
-	done
 	sed -i "/ISIS/c\# unnecessary line was deleted by VERA" seq/configure/RELEASE
 	sed -i "/TIRPC=YES/c\TIRPC=YES" asyn/configure/CONFIG_SITE
+
+	cd seq ; make clean; make ; cd ../
+	cd pcre ; make clean; make ; cd ../
+	cd sscan ; make clean; make ; cd ../
+	cd calc ; make clean; make ; cd ../
+	cd asyn ; make clean; make ; cd ../
+	cd streamd ; make clean; make ; cd ../
+	cd memDisplay ; make clean; make ; cd ../
+	cd regDev ; make clean; make ; cd ../
+	cd autosave ; make clean; make ; cd ../
+	cd busy ; make clean; make ; cd ../
 fi
 
 
