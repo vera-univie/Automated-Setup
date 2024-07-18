@@ -29,5 +29,4 @@ read skip_epics_ethercat
 
 if [[ "$skip_epics_ethercat" == "n" || "$skip_epics_ethercat" == "N" ]]; then
 	./epics-ethercat_setup.sh
-	cp update_ioc.sh ../
 fi
