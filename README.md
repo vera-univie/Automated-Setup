@@ -6,20 +6,11 @@ You must have installed and built the Kernel from source, which is needed for Et
 (see 'Build_Kernel.txt')
 
 
-# Complete Setup
+# Setup und Installation
 
 ### !!! Make sure to rename the downloaded repo from 'Automated-Setup' to 'EPICS'
 
-To install everything at once (so EtherCAT master, EPICS-Base, EPICS-support and EPICS-EtherCAT), execute the following commands:
-> sudo chmod u+x setup.sh
->
-> sudo ./setup.sh
-
-And enter the information required
-
-# Seperate Setup
-
-Or you can also setup everything individually. Execute the respective files in the scripts folder.
+To install EtherCAT and EPICS, install the following things in the same order as listed below. Just execute the scripts in the scripts folder and follow the steps necessary. For a detailed record on how we got to this process, see the StepByStep installation text file, where we have documented (hopefully) all of the steps we took.
 
 ## EtherCAT Master
 To install EtherCAT Master, execute these commands while in your scripts folder. This will create a new folder called EtherLAB at the same level as your EPICS folder. You can change that by editing the script (this information is close to the top of the script).
