@@ -6,9 +6,23 @@ You must have installed and built the Kernel from source, which is needed for Et
 (see 'Build_Kernel.txt')
 
 
+# Complete Setup
+
+### !!! Make sure to rename the downloaded repo from 'Automated-Setup' to 'EPICS'
+
+To install everything at once (so EtherCAT master, EPICS-Base, EPICS-support and EPICS-EtherCAT), execute the following commands:
+> sudo chmod u+x setup.sh
+>
+> sudo ./setup.sh
+
+And enter the information required
+
+# Seperate Setup
+
+Or you can also setup everything individually. Execute the respective files in the scripts folder.
+
 ## EtherCAT Master
-To install the EtherCAT Master, bring the 'ethercat_setup.sh' file into the folder where you want to have it installed (such as ~/EtherLAB/).
-Then execute the file using the following commands:
+To install EtherCAT Master, execute these commands while in your scripts folder. This will create a new folder called EtherLAB at the same level as your EPICS folder. You can change that by editing the script (this information is close to the top of the script).
 > sudo chmod u+x ethercat_setup.sh
 >
 > sudo ./ethercat_setup.sh
@@ -16,13 +30,13 @@ Then execute the file using the following commands:
 Now follow follow the instructions from the terminal, if any are given.
 
 ## EPICS Base
-To install EPICS Base, execute the epics-base_setup.sh file the same way as before, and leaving it in your EPICS folder.
+To install EPICS Base, execute the epics-base_setup.sh file the same way as before, and leaving it in your scripts folder.
 > sudo chmod u+x epics-base_setup.sh
 >
 > sudo ./epics-base_setup.sh
 
 ## EPICS support
-To install EPICS support, execute the epics-support_setup.sh file while it is in your EPICS folder.
+To install EPICS support, execute the epics-support_setup.sh file while it is in your scripts folder.
 > sudo chmod u+x epics-support_setup.sh
 >
 > sudo ./epics-base_setup.sh
@@ -32,7 +46,7 @@ should be installed, and second, confirmation if the script should download the 
 the different support modules, or if it should download a stable version from our github.
 
 ## EtherCAT for EPICS
-To install EtherCAT for EPICS, execute the epics-ethercat_setup.sh file, which must be in your EPICS folder.
+To install EtherCAT for EPICS, execute the epics-ethercat_setup.sh file, which must be in your scripts folder.
 > sudo chmod u+x epics-ethercat_setup.sh
 >
 > sudo ./epics-ethercat_setup.sh
@@ -40,6 +54,10 @@ To install EtherCAT for EPICS, execute the epics-ethercat_setup.sh file, which m
 The executable requires no additional input from the user once it has been started.
 
 # Using an IOC to control EtherCAT modules
+## Automated configuration (RECOMMENDED)
+Use the 'update_ioc.sh' script in the scripts folder, in order to automatically update an IOC with your currently connected EtherCAT configuration.
+
+## Manual IOC configuration
 In our case, we are using typical Beckhoff modules. You can use the scanTest IOC as an example. There are already modules entered there, so replace them with the ones you want. Follow these steps to do so:
 
 Navigate to the /etc folder of your IOC (e.g. ~/EPICS/ethercat/iocs/scanTest/etc)
