@@ -11,6 +11,7 @@ read ioc
 cd ../ethercat/iocs/$ioc
 
 /etc/init.d/ethercat start
+sleep 2
 /opt/etherlab/bin/ethercat slaves > basic_slaveslist.txt
 /opt/etherlab/bin/ethercat slaves -v > verbose_slaveslist.txt
 
