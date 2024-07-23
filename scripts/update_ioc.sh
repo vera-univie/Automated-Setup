@@ -2,7 +2,7 @@
 #
 # Created by: Daniel Finley
 # For: VERA (Uni Wien)
-# Date: 12.07.2024
+# Date: 18.07.2024
 #
 # This bash excutable updates an IOC of your choice in the ethercat folder one level above this file
 # - (your EPICS folder). It seeks the necessary information from your EtherCAT master and only asks
@@ -15,7 +15,7 @@
 # ... in your scripts folder
 #
 #
-#
+# All information which must be input by the user should be very self-explanatory.
 #
 
 
