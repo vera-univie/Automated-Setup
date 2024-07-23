@@ -4,13 +4,13 @@
 # For: VERA (Uni Wien)
 # Date: 11.07.2024
 #
-# This bash excutable installs and sets up EPICS-Base in the folder where
-# this file is located. It also installs all necessary libraries and git repos.
+# This bash excutable installs and sets up EPICS base in the folder one level above this file
+# - (your EPICS folder). It also installs all necessary libraries and git repos.
 #
 # To set up EPICS-Base, run:
 # sudo chmod u+x epics-base_setup.sh
 # sudo ./epics-base_setup.sh
-# in the folder that you wish EPICS-Base to be set up
+# ... in your scripts folder
 #
 # The executable requires the user to input the user for which it should be installed
 # as well as confirmation if the system should be restarted at the end of the installation

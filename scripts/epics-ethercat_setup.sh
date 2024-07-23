@@ -4,13 +4,13 @@
 # For: VERA (Uni Wien)
 # Date: 12.07.2024
 #
-# This bash excutable installs and sets up EtherCAT for EPICS in the folder where
-# this file is located. It also installs all necessary libraries and git repos.
+# This bash excutable installs and sets up EtherCAT for EPICS in the folder one level above this file
+# - (your EPICS folder). It also installs all necessary libraries and git repos.
 #
 # To set up EtherCAT for EPICS, run:
 # sudo chmod u+x epics-ethercat_setup.sh
 # sudo ./epics-ethercat_setup.sh
-# in the folder that you wish EtherCAT for EPICS to be set up (this must be your EPICS folder)
+# ... in your scripts folder
 #
 # The executable requires no additional input from the user once it has been started.
 #

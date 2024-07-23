@@ -4,13 +4,14 @@
 # For: VERA (Uni Wien)
 # Date: 10.07.2024
 #
-# This bash excutable installs and sets up the EtherCAT master in the folder where
-# this file is located. It also installs all necessary libraries and git repos.
+# This bash excutable creates a EtherLAB folder two levels above this file 
+# (so the same level as your EPICS folder would be) installs and sets up the EtherCAT master 
+# in the folder where this file is located. It also installs all necessary libraries and git repos.
 #
 # To set up the EtherCAT master, run:
 # sudo chmod u+x ethercat_setup.sh
 # sudo ./ethercat_setup.sh
-# in the folder that you wish the EtherCAT master to be set up
+# ... in your scripts folder
 #
 # The executable requires at least two inputs from the user, although the
 # input should be clear and you should not need to open another terminal window.

@@ -4,13 +4,13 @@
 # For: VERA (Uni Wien)
 # Date: 12.07.2024
 #
-# This bash excutable installs and sets up EPICS support in the folder where
-# this file is located. It also installs all necessary libraries and git repos.
+# This bash excutable installs and sets up EPICS support in the folder one level above this file
+# - (your EPICS folder). It also installs all necessary libraries and git repos.
 #
 # To set up EPICS support, run:
 # sudo chmod u+x epics-support_setup.sh
 # sudo ./epics-support_setup.sh
-# in the folder that you wish EPICS support to be set up (this must be your EPICS folder)
+# ... in your scripts folder
 #
 # The executable requires two pieces of input from the user. First, the username for which EPICS support
 # should be installed, and second, confirmation if the script should download the newest versions of

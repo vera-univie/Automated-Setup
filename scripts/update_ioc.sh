@@ -1,4 +1,22 @@
 #!/bin/bash
+#
+# Created by: Daniel Finley
+# For: VERA (Uni Wien)
+# Date: 12.07.2024
+#
+# This bash excutable updates an IOC of your choice in the ethercat folder one level above this file
+# - (your EPICS folder). It seeks the necessary information from your EtherCAT master and only asks
+# the most relevant information.
+#
+#
+# To update an IOC, run:
+# sudo chmod u+x update_ioc.sh
+# sudo ./update_ioc.sh
+# ... in your scripts folder
+#
+#
+#
+#
 
 
 echo -e "\n-----------------------------------------------------------------------\n"
