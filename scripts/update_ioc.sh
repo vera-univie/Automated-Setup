@@ -54,7 +54,7 @@ read system_name
 
 sed -i "/<device.*/d" etc/chain.xml
 
-sed -i "/dbLoadRecords.*/d" st.cmd
+sed -i "/^dbLoadRecords.*/d" st.cmd
 sed -i "/iocInit()/i\dbLoadRecords(\"../../db/MASTER.template\", \"DEVICE=$system_name:0,PORT=MASTER0,SCAN=I/O Intr\")" st.cmd
 
 for k in $(seq 1 $i); do
