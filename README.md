@@ -48,6 +48,8 @@ The executable requires no additional input from the user once it has been start
 ## Automated configuration (RECOMMENDED)
 Use the 'update_ioc.sh' script in the scripts folder, in order to automatically update an IOC with your currently connected EtherCAT configuration.
 
+In order to avoid a dbLoadRecords() call being deleted and replaced when this script is called, simply indent the dbLoadRecordsCall() call by one space.
+
 ## Manual IOC configuration
 In our case, we are using typical Beckhoff modules. You can use the scanTest IOC as an example. There are already modules entered there, so replace them with the ones you want. Follow these steps to do so:
 
