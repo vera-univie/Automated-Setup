@@ -138,21 +138,22 @@ then
 
 else
 	git clone https://github.com/vera-univie/EPICS-support.git ./
-	sed -i "/ISIS/c\# unnecessary line was deleted by VERA" seq/configure/RELEASE
-	sed -i "/TIRPC=YES/c\TIRPC=YES" asyn/configure/CONFIG_SITE
-	sed -i "/ISIS/c\# unnecessary line was deleted by VERA" seq/configure/RELEASE
-	sed -i "/TIRPC=YES/c\TIRPC=YES" asyn/configure/CONFIG_SITE
 
-	cd seq ; make clean; make ; cd ../
-	cd pcre ; make clean; make ; cd ../
-	cd sscan ; make clean; make ; cd ../
-	cd calc ; make clean; make ; cd ../
-	cd asyn ; make clean; make ; cd ../
-	cd streamd ; make clean; make ; cd ../
-	cd memDisplay ; make clean; make ; cd ../
-	cd regDev ; make clean; make ; cd ../
-	cd autosave ; make clean; make ; cd ../
-	cd busy ; make clean; make ; cd ../
+	cd seq ; edit_paths configure/RELEASE ; make clean; make ; cd ../
+	cd pcre ; edit_paths configure/RELEASE ; make clean; make ; cd ../
+	cd sscan ; edit_paths configure/RELEASE ; make clean; make ; cd ../
+	cd calc ; edit_paths configure/RELEASE ; make clean; make ; cd ../
+	cd asyn ; edit_paths configure/RELEASE ; make clean; make ; cd ../
+	cd streamd ; edit_paths configure/RELEASE ; make clean; make ; cd ../
+	cd memDisplay ; edit_paths configure/RELEASE ; make clean; make ; cd ../
+	cd regDev ; edit_paths configure/RELEASE ; make clean; make ; cd ../
+	cd autosave ; edit_paths configure/RELEASE ; make clean; make ; cd ../
+	cd busy ; edit_paths configure/RELEASE ; make clean; make ; cd ../
+
+ 	sed -i "/ISIS/c\# unnecessary line was deleted by VERA" seq/configure/RELEASE
+	sed -i "/TIRPC=YES/c\TIRPC=YES" asyn/configure/CONFIG_SITE
+	sed -i "/ISIS/c\# unnecessary line was deleted by VERA" seq/configure/RELEASE
+	sed -i "/TIRPC=YES/c\TIRPC=YES" asyn/configure/CONFIG_SITE
 fi
 
 
