@@ -32,16 +32,22 @@ apt install autoconf dh-autoreconf pkgconf -y
 # see tutorial: 2 - configure
 echo -e "\n\n--------------------------------------------------------------------\n"
 ls /usr/src
-echo -e "\nIs the name of your linux-source folder linux-source-6.1? (y/n): "
+echo -e "\nDo you have linux-source-6.1? (y/n): "
 read response
 
 if [[ "$response" == "y" || "$response" == "Y" ]]
 then
 	./configure --prefix=/opt/etherlab --sysconfdir=/etc --with-module-dir=ethercat --enable-generic=yes --enable-wildcards=yes --enable-8139too=no --with-linux-dir=/usr/src/linux-source-6.1 --enable-hrtimer --enable-tool --enable-sii-assign --enable-eoe --enable-cycles -enable-regalias
 else
-	echo -e "\nEnter name (with version) of your linux-source folder: "
-	read linux_source_name
-	./configure --prefix=/opt/etherlab --sysconfdir=/etc --with-module-dir=ethercat --enable-generic=yes --enable-wildcards=yes --enable-8139too=no --with-linux-dir=/usr/src/$linux_source_name --enable-hrtimer --enable-tool --enable-sii-assign --enable-eoe --enable-cycles -enable-regalias
+	echo -e "\nDo you want to enter your linux source path?: "
+	read response
+	if [[ "$response" == "y" || "$response" == "Y" ]]
+	then
+		echo -e "\nEnter your linux source path (e.g. /usr/src/linux-source-6.1):"
+		read linux_source_name
+		./configure --prefix=/opt/etherlab --sysconfdir=/etc --with-module-dir=ethercat --enable-generic=yes --enable-wildcards=yes --enable-8139too=no --with-linux-dir=$linux_source_name --enable-hrtimer --enable-tool --enable-sii-assign --enable-eoe --enable-cycles -enable-regalias
+	else
+		./configure --prefix=/opt/etherlab --sysconfdir=/etc --with-module-dir=ethercat --enable-generic=yes --enable-wildcards=yes --enable-8139too=no --enable-hrtimer --enable-tool --enable-sii-assign --enable-eoe --enable-cycles -enable-regalias
 fi
 
 # see tutorial: 3 - compile
