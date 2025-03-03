@@ -71,7 +71,7 @@ for k in $(seq 1 $i); do
 	sed -i "/<\/chain>/i\<device type_name=\"$ord\" revision=\"$rev\" position=\"$pos\" name=\"$name\" \/>" etc/chain.xml
 
 	echo "Updating st.cmd"
-	sed -i "/iocInit()/i\dbLoadRecords(\"../../db/$ord.template\", \"DEVICE=$system_name:$k,PORT=$name,SCAN=I/O Intr\")" st.cmd
+	sed -i "/iocInit()/i\dbLoadRecords(\"../../db/$ord.template\", \"DEVICE=$system_name:$name,PORT=$name,SCAN=I/O Intr\")" st.cmd
 done
 
 echo "Expanding chain.xml -> generating scanner.xml"
