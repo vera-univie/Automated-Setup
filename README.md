@@ -1,5 +1,7 @@
 # Automated Setup of EPICS and EtherCAT
 
+You can also visit our ReadTheDocs with an even better tutorial! -> https://tutorial-epics-ethercat.readthedocs.io/en/latest/
+
 ## Prerequisites
 You must have installed and built the Kernel from source, which is needed for EtherCAT Master
 
