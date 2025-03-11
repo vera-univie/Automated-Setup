@@ -44,7 +44,7 @@ To install EtherCAT for EPICS, execute the epics-ethercat_setup.sh file, which m
 >
 > sudo ./epics-ethercat_setup.sh
 
-The executable requires no additional input from the user once it has been started.
+The executable requires you to enter the path of your EtherLAB directory once it has started.
 
 # Using an IOC to control EtherCAT modules
 ## Automated configuration (RECOMMENDED)
